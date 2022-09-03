@@ -1,0 +1,59 @@
+
+```{r}
+#Question 1
+#https://imgur.com/a/R44KzPg
+```
+
+```{r}
+#Question 2
+a <- "This. This is a markdown test.";
+print (a);
+b <- "The variable y contains the mean of 5 values.";
+print (b);
+```
+
+```{r}
+# Write you code in this cell
+x<- c(0,1,1,2,3);
+y<- mean (x);
+x;
+y;
+```
+
+```{r}
+# Question 3
+sec_per_min <- 60;
+sec_per_hour <- sec_per_min*60;
+sec_per_day <- sec_per_hour*24;
+sec_per_day;
+```
+
+```{r}
+#Question 4
+#Recall that `c` creates atomic vectors.
+
+#What does the following create? Specifically, what is the of the data it contains?
+#`c(1, 2, 3, "Hi")`
+#The code creates a vector containing interger numerics and a text, where "Hi" can be defined as a variable that could correspond to a character.
+
+#Would the following be valid?
+#`c(1, 2, 3, "Hi") + 1 `
+#No, it would not be valid because "Hi" is not a numeric data type, and thus could not be treated so. If "Hi" were replaced by 4, then the code for the vector would be valid, and an additional numeric integer would be added to the vector.
+
+#How about 
+#`c(1, 2, 3, FALSE) + 1 `
+#Yes, it would be valid because FALSE is a logical data type that corresponds to a zero value. The code adds one to the value of each of the vector elements. 
+
+#Hint: recall that know that the function `class()` returns the atomic data type stored in a vector
+```
+
+```{r}
+# Question 5
+#This is the plot my plot was inspired by:https://www.dropbox.com/s/c4nf3n96np3i7nm/simple_qplot_example.png?dl=1
+x_axis <- c(seq(0,10, 0.5));
+x <- x_axis;
+y_axis <- x^2 + 2*x + 3;
+y <- y_axis;
+library(ggplot2);
+qplot(x,y, xlab= "kaʻu x-iho", ylab= "kaʻu y-iho", main= "Kaʻu Pakuhi No Ka Haʻawina ʻEkahi",size=x, colour=y)
+```
