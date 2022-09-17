@@ -40,7 +40,7 @@ mpg$class_numeric = sapply(mpg$class, convert_class_int, USE.NAMES = FALSE)
 
 ```{r}
 # Write your code here
-mpg$class_numeric <- as.integer(as.factor(mpg$class, levels=c(mpg$class)))
+mpg$class_numeric <- as.integer(as.factor(mpg$class))
 #mpg$class_numeric <- as.integer(factor(mpg$class,levels = c("2seater", "subcompact", "compact", "midsize", "minivan", "suv", "pickup"),ordered = TRUE))
 str(mpg)
 ggplot(data = mpg) + 
@@ -62,8 +62,9 @@ ggplot(data = mpg) +
 ```{r}
 # Write your code here
 ggplot(mpg, aes(cty,hwy)) +
-  geom_point(aes(color=class)) +
-  geom_smooth(method = "lm", se=FALSE, color='red')
+  geom_point(aes(color=class, size=6)) +
+  geom_smooth(method = "lm", se=FALSE, color='red')+
+   guides(size = "none")
 ```
 
 **Question 5** 
