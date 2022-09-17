@@ -153,10 +153,6 @@ mass_log10<-round(log10(y), digits=8)
 sizeMass<- data.frame(size_log10, mass_log10)
 colnames(sizeMass)<- c("size","mass")
 ggplot(sizeMass, aes(size, mass)) +
-  #scale_x_log10() +
-  #scale_y_log10() +
-  #scale_x_continuous(breaks = seq (-3,7000), trans = "log10") +
-  #scale_y_continuous(trans = "log10") +
   geom_point() +
   geom_smooth(method = "lm", color = "red", se = FALSE)
 #2
